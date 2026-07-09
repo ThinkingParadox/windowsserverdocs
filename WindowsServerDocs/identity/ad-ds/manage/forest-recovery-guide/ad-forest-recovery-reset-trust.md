@@ -28,13 +28,13 @@ ms.custom: 398918dc-c8ab-41a6-a377-95681ec0b543, inhenkel
    For example, if there are two domains in the forest—parent and child—and you're running this command on the restored DC in the parent domain, use the following command syntax:
 
    ```cli
-   netdom trust parent domain name /domain:child domain name /resetOneSide /passwordT:password /userO:administrator /passwordO:*
+   netdom trust parent domain name /domain:child domain name /resetOneSide /passwordT:password /userD:childdomain\administrator /passwordD:*
    ```
 
    When you run this command in the child domain, use the following command syntax:
 
    ```cli
-   netdom trust child domain name /domain:parent domain name /resetOneSide /passwordT:password /userO:administrator /passwordO:*
+   netdom trust child domain name /domain:parent domain name /resetOneSide /passwordT:password /userD:childdomain\administrator /passwordD:*
    ```
 
    > [!NOTE]
